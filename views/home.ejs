@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <h1>สวัสดี</h1>
+    <h1>สวัสดี <%= test %></h1>
+    <form action="/regiter" method="post">
+        <label for="">Username</label>
+        <input type="text" name="username" id="_username" placeholder="username">
+        <label for="">password</label>
+        <input type="text" name="password" id="_password" placeholder="password">
+        <button type="submit">สมัคร</button>
+    </form>
+    <form action="/" method="post">
+        <label for="">Username</label>
+        <input type="text" name="username" id="_username" placeholder="username">
+        <label for="">password</label>
+        <input type="text" name="password" id="_password" placeholder="password">
+        <button type="submit">ล็อคอิน</button>
+    </form>
 </body>
 </html>
