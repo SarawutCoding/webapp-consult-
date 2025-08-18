@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const cookieSession = require('cookie-session');
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 app.use(cookieSession({
     name: 'session',
@@ -13,21 +13,17 @@ app.use(cookieSession({
     maxAge: 3600 * 1000
 }));
 
-const cone = require('./database/data-connect');
-
 app.use(express.static(path.join(__dirname,'public')));
 // login
-const ifnotLogin = require('./routers/loginUser')
-app.get('/', ifnotLogin, (req, res) => {
-    res.render('home', {test: 'ใช้ได้'});
-});
-const {insertUser} = require('./database/sql/insertUser');
+const ifnotLogin = require('./script/loginUser')
 
-app.post('/regiter', (req, res) => {
-    const {username, password} = req.body;
-    insertUser(username, password, 'user', cone);
-    res.redirect('/');
+app.get('/', ifnotLogin, (req, res) => {
+    res.render('login-register', {test: 'ใช้ได้'});
 });
+
+// register
+const regiterUser = require('./routers/registerUser')
+app.use('/register', regiterUser);
 
 app.listen(3000, () => {
     console.log('Server start 3000');
