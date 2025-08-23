@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3C873A;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    width: auto;
+}
+
+nav .inputForm{
+    width: 400px;
+    padding: 6px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 20px;
+}
+
+nav button {
+    padding: 6px 20px 6px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+nav button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    width: 90%;
+}
+
+.row{
+    width: 50%;
+    padding: 0px 10px 0px 10px;
+}
+
+.inputRegister{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 15px;
+}
+
+.inputRegister .inputText{
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+}
+
+.buttonForm{
+    margin-top: 15px;
+}
+
+.buttonForm button{
+    padding: 6px 20px 6px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+.buttonForm button:hover {
+    color: black;
+    background-color: #3C873A;
+    cursor: pointer;
+}

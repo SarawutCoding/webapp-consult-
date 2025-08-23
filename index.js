@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname,'public')));
 const ifnotLogin = require('./script/loginUser')
 
 app.get('/', ifnotLogin, (req, res) => {
-    res.render('login-register', {test: 'ใช้ได้'});
+    res.render('home');
 });
 
 // register

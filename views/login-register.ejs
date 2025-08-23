@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/home.css">
+    <title>ปรึกษาคลายทุกข์</title>
+    <link rel="stylesheet" href="css/login-register.css">
 </head>
+
 <body>
-    <h1>สวัสดี <%= test %></h1>
-    <form action="/regiter" method="post">
-        <label for="">Username</label>
-        <input type="text" name="username" id="_username" placeholder="username">
-        <label for="">password</label>
-        <input type="text" name="password" id="_password" placeholder="password">
-        <button type="submit">สมัคร</button>
-    </form>
-    <form action="/" method="post">
-        <label for="">Username</label>
-        <input type="text" name="username" id="_username" placeholder="username">
-        <label for="">password</label>
-        <input type="text" name="password" id="_password" placeholder="password">
-        <button type="submit">ล็อคอิน</button>
-    </form>
+    <nav class="navbar">
+        <h1>ปรึกษาคลายทุกข์</h1>
+        <div class="from-login">
+            <form action="" method="post">
+                <input type="text" class="inputForm" name="username" id="" placeholder="username">
+                <input type="text" class="inputForm" name="password" id="" placeholder="password">
+                <button type="submit">login</button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <h1>เหนื่อยไหม? ลองเข้ามาคุยกันสิ...</h1>
+                <h1>ที่นี่คุณสามารถปรึกษากับผู้เชี่ยวชาญได้แบบส่วนตัวและอ่านโพสต์กำลังใจจากที่ปรึกษาที่จะช่วยให้คุณมองเห็นทางออก</h1>
+                <br>
+                <img src="./img/imag-login.jpg" alt="" width="78%" style="border-radius: 20px;">
+            </div>
+            <div class="row">
+                <h1>สมัครสมาชิก</h1>
+                <form action="" method="post">
+                    <div class="inputRegister">
+                        <label for="firstname">firstname</label>
+                        <input type="text" class="inputText" name="firstname" id="">
+                    </div>
+                    <div class="inputRegister">
+                        <label for="lastname">lastname</label>
+                        <input type="text" class="inputText" name="lastname" id="">
+                    </div>
+                    <div class="inputRegister">
+                        <label for="email">email</label>
+                        <input type="email" class="inputText" name="email" id="">
+                    </div>
+                    <div class="inputRegister">
+                        <label for="password">password</label>
+                        <input type="text" class="inputText" name="password" id="">
+                    </div>
+                    <div class="inputRegister">
+                        <label for="sex">sex</label>
+                        <div class="redioItem">
+                            <input type="radio" name="sex" id="" value="ชาย">
+                            <label for="male">ชาย</label> 
+                            <input type="radio" name="sex" id="" value="หญิง">
+                            <label for="female">หญิง</label>
+                        </div>
+                    </div>
+                    <div class="buttonForm">
+                        <button type="submit">SignUp</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>
